@@ -27,3 +27,24 @@ export interface BlogPost {
   };
   category: string;
 }
+
+
+
+export interface ServiceImage {
+  url: string;
+  alt: string;
+}
+
+export interface Service {
+  id: string;
+  title: string;
+  shortDescription: string;
+  fullDescription: string;
+  images: ServiceImage[];
+  duration: string;
+  price: number;
+  availability: string[];
+  benefits: string[];
+  preparations?: string[];
+}
+

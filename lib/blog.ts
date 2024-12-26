@@ -7,7 +7,7 @@ export const featuredPosts = [
     date: '2024-03-15',
     image: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80',
     author: {
-      name: 'Dr. Priya Sharma',
+      name: 'Dr. DasinderJeet Singh',
       avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80',
     },
     category: 'wellness',
@@ -20,7 +20,7 @@ export const featuredPosts = [
     date: '2024-03-12',
     image: 'https://images.unsplash.com/photo-1515364229687-331ee9a42358?auto=format&fit=crop&q=80',
     author: {
-      name: 'Dr. Rajesh Kumar',
+      name: 'Dr. DasinderJeet Singh',
       avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80',
     },
     category: 'research',

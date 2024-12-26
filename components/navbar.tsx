@@ -14,6 +14,7 @@ const routes = [
   { name: 'Categories', path: '/categories' },
   { name: 'Shop', path: '/shop' },
   { name: 'Blog', path: '/blog' },
+  { name: 'Services', path: '/services' },
   { name: 'About', path: '/about' },
   { name: 'Contact', path: '/contact' },
 ];

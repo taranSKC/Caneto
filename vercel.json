@@ -1,28 +1,9 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "package.json",
-        "use": "@vercel/node"
-      },
-      {
-        "src": "next.config.js",
-        "use": "@vercel/next"
-      }
-    ],
     "routes": [
       {
         "src": "/(.*)",
         "dest": "/"
       }
-    ],
-    "env": {
-      "NEXT_PUBLIC_API_URL": "your-api-url-here"
-    },
-    "build": {
-      "env": {
-        "NODE_ENV": "production"
-      }
-    }
+    ]
   }
   

@@ -14,11 +14,11 @@ export default function Home() {
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1545048702-79362596cdc9?auto=format&fit=crop&q=80')] bg-cover bg-center">
           <div className="absolute inset-0 bg-black/60" />
         </div>
-        <div className="container relative py-24 text-center text-white sm:py-32">
-          <h1 className="text-3xl font-bold tracking-tight sm:text-5xl">
+        <div className="container relative py-24 text-center  sm:py-32">
+          <h1 className="text-3xl font-bold tracking-tight text-white sm:text-5xl">
             Discover the Power of Ayurvedic Healing
           </h1>
-          <p className="mx-auto mt-6 max-w-xl text-lg">
+          <p className="mx-auto mt-6 max-w-xl text-white text-lg">
             Ancient wisdom meets modern wellness. Explore our curated collection of authentic Ayurvedic products and learn about natural healing practices.
           </p>
           <div className="mt-10 flex justify-center gap-4">

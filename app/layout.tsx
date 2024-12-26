@@ -9,7 +9,7 @@ import { Toaster } from '@/components/ui/toaster';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Ayurveda - Natural Healing & Wellness',
+  title: 'Caneato - Natural Healing & Wellness',
   description: 'Discover the ancient wisdom of Ayurvedic medicine and shop premium natural products.',
 };
 

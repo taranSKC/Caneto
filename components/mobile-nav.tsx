@@ -29,7 +29,7 @@ export function MobileNav({ routes, pathname }: MobileNavProps) {
         <div className="px-7">
           <Link href="/" className="flex items-center">
             <Leaf className="h-6 w-6" />
-            <span className="ml-2 text-lg font-bold">Ayurveda</span>
+            <span className="ml-2 text-lg font-bold">Caneato</span>
           </Link>
           <nav className="mt-8 flex flex-col gap-4">
             {routes.map((route) => (

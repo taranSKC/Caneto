@@ -1,6 +1,12 @@
-import { MapPin, Mail, Phone, Clock, Youtube } from 'lucide-react'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Separator } from "@/components/ui/separator"
+import { MapPin, Mail, Phone, Clock, Youtube } from "lucide-react";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
 
 export default function AboutPage() {
   return (
@@ -8,9 +14,11 @@ export default function AboutPage() {
       {/* Hero Section */}
       <section className="relative h-[400px] w-full overflow-hidden">
         <div className="absolute inset-0 bg-black/60" />
-        <div 
-          className="absolute inset-0 bg-cover bg-center" 
-          style={{ backgroundImage: "url('/placeholder.svg?height=400&width=1200')" }}
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: "url('/placeholder.svg?height=400&width=1200')",
+          }}
         />
         <div className="relative h-full flex items-center justify-center text-center px-4">
           <div className="max-w-3xl">
@@ -30,17 +38,26 @@ export default function AboutPage() {
         <Card className="mb-12">
           <CardHeader>
             <CardTitle>Our Story</CardTitle>
-            <CardDescription>A journey through traditional healing</CardDescription>
+            <CardDescription>
+              A journey through traditional healing
+            </CardDescription>
           </CardHeader>
           <CardContent className="grid gap-6">
             <p className="text-lg text-muted-foreground">
-              Founded in 2010, our Ayurvedic store has been dedicated to bringing authentic healing practices 
-              and products to our community. We believe in the power of natural remedies and holistic wellness 
-              approaches that have been perfected over thousands of years in traditional Ayurvedic medicine.
+              The Elixir Ayurvedic clinic was originally established by Shrri
+              Dalip Singh Vaidya, born in 1901 while living in western Punjab of
+              the undivided India, where he studied The Ayurvedic and Unani
+              systems of medicines from a retired military Subedar followed by
+              his practice started in 1921. He was saintly person who
+              concurrently enjoyed the companies of all sorts of sadhus and
+              sanyasis who were believed to have practical knowledge about the
+              medicinal herbs, their applicability and medicinal properties and
+              was greatly benefited from the same.
             </p>
             <p className="text-lg text-muted-foreground">
-              Our team of certified Ayurvedic practitioners and herbalists work tirelessly to source the 
-              highest quality ingredients and create traditional formulations that meet modern wellness needs.
+              Our team of certified Ayurvedic practitioners and herbalists work
+              tirelessly to source the highest quality ingredients and create
+              traditional formulations that meet modern wellness needs.
             </p>
           </CardContent>
         </Card>
@@ -55,8 +72,8 @@ export default function AboutPage() {
             <div className="aspect-video w-full">
               <iframe
                 className="w-full h-full rounded-lg"
-                src="https://www.youtube.com/embed/your-video-id"
-                title="Store Tour"
+                src="https://www.youtube.com/embed/6hBe8o_-OvY?si=-1jspZG0LxKwGxvI"
+                title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               />
@@ -75,21 +92,27 @@ export default function AboutPage() {
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
                   <Mail className="h-5 w-5 text-muted-foreground" />
-                  <a href="mailto:contact@ayurveda.com" className="text-primary hover:underline">
-                    contact@ayurveda.com
+                  <a
+                    href="mailto:theelixirayurveda@gmail.com"
+                    className="text-primary hover:underline"
+                  >
+                    theelixirayurveda@gmail.com
                   </a>
                 </div>
                 <div className="flex items-center gap-3">
                   <Phone className="h-5 w-5 text-muted-foreground" />
-                  <span>+1 (555) 123-4567</span>
+                  <span>+91-93162-39674 </span>
                 </div>
                 <div className="flex items-center gap-3">
                   <Clock className="h-5 w-5 text-muted-foreground" />
-                  <span>Mon - Sat: 9:00 AM - 7:00 PM</span>
+                  <span>Mon - Sat: 10:00 AM - 5:00 PM</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <MapPin className="h-5 w-5 text-muted-foreground" />
-                  <span>123 Wellness Street, Healing City, HC 12345</span>
+                  <span>
+                    Plot No: 2665, St. no. 3, Guru Nanak Colony-B, OPP. G.N.E
+                    College, Gill Road, Ludhiana{" "}
+                  </span>
                 </div>
               </div>
             </CardContent>
@@ -104,7 +127,7 @@ export default function AboutPage() {
               <div className="aspect-video w-full">
                 <iframe
                   className="w-full h-full rounded-lg"
-                  src="https://www.google.com/maps/embed?pb=your-embed-code"
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d54798.75185440139!2d75.857359!3d30.860859!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a8385ee207b15%3A0x71d7ce62bbdb2ac5!2sThe%20Elixir%20Ayurvedic%20Clinic%20Ludhiana!5e0!3m2!1sen!2sus!4v1735318070691!5m2!1sen!2sus"
                   style={{ border: 0 }}
                   allowFullScreen
                   loading="lazy"
@@ -127,21 +150,24 @@ export default function AboutPage() {
                 <h3 className="text-xl font-semibold">Authenticity</h3>
                 <Separator className="my-2" />
                 <p className="text-muted-foreground">
-                  We source genuine Ayurvedic ingredients and follow traditional preparation methods.
+                  We source genuine Ayurvedic ingredients and follow traditional
+                  preparation methods.
                 </p>
               </div>
               <div className="space-y-2">
                 <h3 className="text-xl font-semibold">Sustainability</h3>
                 <Separator className="my-2" />
                 <p className="text-muted-foreground">
-                  Our practices respect both nature and traditional wisdom for a better future.
+                  Our practices respect both nature and traditional wisdom for a
+                  better future.
                 </p>
               </div>
               <div className="space-y-2">
                 <h3 className="text-xl font-semibold">Community</h3>
                 <Separator className="my-2" />
                 <p className="text-muted-foreground">
-                  We're dedicated to educating and nurturing our community's wellbeing.
+                  We're dedicated to educating and nurturing our community's
+                  wellbeing.
                 </p>
               </div>
             </div>
@@ -149,6 +175,5 @@ export default function AboutPage() {
         </Card>
       </main>
     </div>
-  )
+  );
 }
-

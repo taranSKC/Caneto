@@ -1,6 +1,6 @@
-import { notFound } from 'next/navigation';
-import { featuredProducts } from '@/lib/products';
-import { AddToCartButton } from '@/components/add-to-cart-button';
+import { notFound } from "next/navigation";
+import { featuredProducts } from "@/lib/products";
+import { AddToCartButton } from "@/components/add-to-cart-button";
 
 export function generateStaticParams() {
   return featuredProducts.map((product) => ({
@@ -27,13 +27,11 @@ export default function ProductPage({ params }: { params: { id: string } }) {
         </div>
         <div>
           <h1 className="text-3xl font-bold">{product.name}</h1>
-          <p className="mt-4 text-xl font-semibold">${product.price.toFixed(2)}</p>
+          <p className="mt-4 text-xl font-semibold">
+            ${product.price.toFixed(2)}
+          </p>
           <p className="mt-4 text-muted-foreground">{product.description}</p>
-          <AddToCartButton 
-            productName={product.name} 
-            size="lg" 
-            className="mt-8" 
-          />
+          <AddToCartButton product={product} size="lg" className="mt-8" />
         </div>
       </div>
     </div>

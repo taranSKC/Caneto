@@ -1,87 +1,91 @@
-import { notFound } from "next/navigation"
-import Image from "next/image"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Card } from "@/components/ui/card"
-import { Separator } from "@/components/ui/separator"
-import { Clock, IndianRupee, ArrowLeft } from 'lucide-react'
-import { Service } from "@/lib/types"
+import { notFound } from "next/navigation";
+import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
+import { Clock, IndianRupee, ArrowLeft } from "lucide-react";
+import { Service } from "@/lib/types";
 
 // This would typically come from your API or database
 const services: Service[] = [
   {
     id: "1",
-    title: "Abhyanga Massage",
-    shortDescription: "Traditional full-body Ayurvedic oil massage for deep relaxation and healing.",
-    fullDescription: "Abhyanga is a form of Ayurvedic medicine involving massage of the body with warm herb-infused oils. The practice of Abhyanga is designed to promote wellness by harmonizing mind, body and spirit, deeply relaxing the nervous system, and promoting lymphatic drainage.",
+    title: "PanchKarma",
+    shortDescription:
+      "Traditional full-body Ayurvedic oil massage for deep relaxation and healing.",
+    fullDescription:
+      "Abhyanga is a form of Ayurvedic medicine involving massage of the body with warm herb-infused oils. The practice of Abhyanga is designed to promote wellness by harmonizing mind, body and spirit, deeply relaxing the nervous system, and promoting lymphatic drainage.",
     images: [
       {
-        url: "/placeholder.svg?height=400&width=600",
-        alt: "Abhyanga Massage Treatment Room"
+        url: "https://theelixirayurveda.com/pics/ser/2.jpg",
+        alt: "Abhyanga Massage Treatment Room",
       },
       {
-        url: "/placeholder.svg?height=400&width=600",
-        alt: "Ayurvedic Oils for Massage"
-      }
+        url: "https://theelixirayurveda.com/pics/ser/3.jpg",
+        alt: "Ayurvedic Oils for Massage",
+      },
     ],
     duration: "60 minutes",
     price: 3500,
     availability: [
       "Monday to Friday: 9:00 AM - 6:00 PM",
       "Saturday: 10:00 AM - 4:00 PM",
-      "Sunday: Closed"
+      "Sunday: Closed",
     ],
     benefits: [
       "Improves blood circulation",
       "Reduces stress and anxiety",
       "Promotes better sleep",
       "Nourishes the skin",
-      "Detoxifies the body"
+      "Detoxifies the body",
     ],
     preparations: [
       "Avoid heavy meals 2 hours before treatment",
       "Arrive 10 minutes before appointment",
       "Wear comfortable clothing",
-      "Inform therapist of any medical conditions"
-    ]
+      "Inform therapist of any medical conditions",
+    ],
   },
   {
     id: "2",
-    title: "Shirodhara Treatment",
-    shortDescription: "Gentle streaming of warm oil on the forehead for mental clarity and relaxation.",
-    fullDescription: "Shirodhara is a form of Ayurveda therapy that involves gently pouring warm herb-infused oil over the forehead and scalp. This deeply relaxing treatment is known to improve mental clarity, reduce anxiety, and promote deep relaxation.",
+    title: "Cupping Therapy",
+    shortDescription:
+      "Gentle streaming of warm oil on the forehead for mental clarity and relaxation.",
+    fullDescription:
+      "Shirodhara is a form of Ayurveda therapy that involves gently pouring warm herb-infused oil over the forehead and scalp. This deeply relaxing treatment is known to improve mental clarity, reduce anxiety, and promote deep relaxation.",
     images: [
       {
-        url: "/placeholder.svg?height=400&width=600",
-        alt: "Shirodhara Treatment Setup"
+        url: "https://theelixirayurveda.com/pics/ser/2.jpg",
+        alt: "Shirodhara Treatment Setup",
       },
       {
-        url: "/placeholder.svg?height=400&width=600",
-        alt: "Shirodhara Oil Stream"
-      }
+        url: "https://theelixirayurveda.com/pics/ser/3.jpg",
+        alt: "Shirodhara Oil Stream",
+      },
     ],
     duration: "45 minutes",
     price: 4500,
     availability: [
       "Monday to Friday: 10:00 AM - 5:00 PM",
       "Saturday: 10:00 AM - 3:00 PM",
-      "Sunday: Closed"
+      "Sunday: Closed",
     ],
     benefits: [
       "Improves mental clarity",
       "Reduces anxiety and stress",
       "Promotes better sleep",
       "Relieves headaches",
-      "Nourishes hair and scalp"
+      "Nourishes hair and scalp",
     ],
     preparations: [
       "Avoid caffeine on the day of treatment",
       "Come with clean, dry hair",
       "Wear comfortable clothing",
-      "Plan to rest after the treatment"
-    ]
-  }
-]
+      "Plan to rest after the treatment",
+    ],
+  },
+];
 
 export function generateStaticParams() {
   return services.map((post) => ({
@@ -89,16 +93,23 @@ export function generateStaticParams() {
   }));
 }
 
-export default function ServiceDetailPage({ params }: { params: { id: string } }) {
-  const service = services.find(s => s.id === params.id)
+export default function ServiceDetailPage({
+  params,
+}: {
+  params: { id: string };
+}) {
+  const service = services.find((s) => s.id === params.id);
 
   if (!service) {
-    notFound()
+    notFound();
   }
 
   return (
     <div className="container mx-auto px-4 py-12">
-      <Link href="/services" className="inline-flex items-center mb-6 text-primary hover:underline">
+      <Link
+        href="/services"
+        className="inline-flex items-center mb-6 text-primary hover:underline"
+      >
         <ArrowLeft className="mr-2 h-4 w-4" />
         Back to Services
       </Link>
@@ -140,7 +151,7 @@ export default function ServiceDetailPage({ params }: { params: { id: string } }
             <div className="flex items-center gap-2">
               <IndianRupee className="h-5 w-5" />
               <span className="text-2xl font-semibold">
-                {service.price.toLocaleString('en-IN')}
+                {service.price.toLocaleString("en-IN")}
               </span>
             </div>
           </div>
@@ -181,10 +192,11 @@ export default function ServiceDetailPage({ params }: { params: { id: string } }
             </div>
           )}
 
-          <Button size="lg" className="w-full">Book Now</Button>
+          <Button size="lg" className="w-full">
+            Book Now
+          </Button>
         </div>
       </div>
     </div>
-  )
+  );
 }
-

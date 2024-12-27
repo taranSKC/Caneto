@@ -27,7 +27,7 @@ export function ProductCard({ product }: ProductCardProps) {
         <p className="mt-2 font-semibold">${product.price.toFixed(2)}</p>
       </CardContent>
       <CardFooter className="p-4 pt-0">
-        <AddToCartButton productName={product.name} className="w-full" />
+        <AddToCartButton product={product} className="w-full" />
       </CardFooter>
     </Card>
   );
